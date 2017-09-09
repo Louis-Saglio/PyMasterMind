@@ -1,0 +1,4 @@
+Combination:
+    Liste de Pawn
+    Pawn(pawn1, pawn2, pawn3)
+    Pawn(couleur1, couleur2, ...)
