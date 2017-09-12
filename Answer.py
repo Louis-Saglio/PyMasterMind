@@ -4,10 +4,19 @@ class Answer(list):
     GOOD_COLOR_BAD_POSITION = "1"
     BAD_COLOR = "0"
 
-    def __init__(self, args=''):
+    def __init__(self, args='', default='4'):
+        if isinstance(args, int):
+            args = default * args
         super().__init__()
         for answer in args:
             self.append(answer)
+
+    @property
+    def digit(self):
+        rep = ''
+        for dgt in self:
+            rep += dgt
+        return [int(i) for i in rep]
 
     @property
     def range(self):
